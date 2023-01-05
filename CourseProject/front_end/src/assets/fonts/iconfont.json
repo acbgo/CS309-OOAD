@@ -1,0 +1,37 @@
+{
+  "id": "3846971",
+  "name": "rate-face",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22258593",
+      "name": "一般",
+      "font_class": "daochu1024-33",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "22258594",
+      "name": "非常满意",
+      "font_class": "daochu1024-35",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "22258595",
+      "name": "满意",
+      "font_class": "daochu1024-34",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "22258596",
+      "name": "不满意",
+      "font_class": "daochu1024-32",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    }
+  ]
+}

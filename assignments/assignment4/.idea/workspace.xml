@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03dff8fa-141d-4d16-b17f-ae0cea5e1570" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Icv2QPeogqbb9Qw1Wy3VT6qaZR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/OneDrive - 南方科技大学/大学/4 大三上/2 课程/4 Java2/4 finalProject/CS209-project-22fall-master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OneDrive - 南方科技大学\code\CS309_OOAD\assignments\assignment4\src\dependency_injection" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BeanFactoryLocalTest">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mytest.test" />
+      <module name="assignment4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanFactoryLocalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assignment4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="localtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="localtests" />
+      <option name="MAIN_CLASS_NAME" value="localtests.BeanFactoryLocalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanFactoryLocalTest.testFieldWithValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assignment4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="localtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="localtests" />
+      <option name="MAIN_CLASS_NAME" value="localtests.BeanFactoryLocalTest" />
+      <option name="METHOD_NAME" value="testFieldWithValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanFactoryLocalTest.testResolveWithNoDependency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="assignment4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="localtests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="localtests" />
+      <option name="MAIN_CLASS_NAME" value="localtests.BeanFactoryLocalTest" />
+      <option name="METHOD_NAME" value="testResolveWithNoDependency" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BeanFactoryLocalTest" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.BeanFactoryLocalTest.testFieldWithValue" />
+        <item itemvalue="JUnit.BeanFactoryLocalTest.testResolveWithNoDependency" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03dff8fa-141d-4d16-b17f-ae0cea5e1570" name="Changes" comment="" />
+      <created>1670493478273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670493478273</updated>
+      <workItem from="1670493479215" duration="456000" />
+      <workItem from="1670554340739" duration="4056000" />
+      <workItem from="1670571712093" duration="92000" />
+      <workItem from="1670594261413" duration="6895000" />
+      <workItem from="1670670594074" duration="1479000" />
+      <workItem from="1670748176735" duration="48000" />
+      <workItem from="1670762087801" duration="5000" />
+      <workItem from="1670812002279" duration="15918000" />
+      <workItem from="1670852287230" duration="7000" />
+      <workItem from="1670856359600" duration="3176000" />
+      <workItem from="1670912361684" duration="62000" />
+      <workItem from="1670925889744" duration="765000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
