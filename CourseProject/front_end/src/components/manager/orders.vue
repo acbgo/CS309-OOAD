@@ -195,7 +195,7 @@ export default {
         if (valid) {
           const url = 'http://10.24.3.53:8181/updateOrder?HotelName=' + this.hotelName +
             '&RoomNumber=' + this.ruleForm.roomNumber + '&username=' + this.ruleForm.username + '&price=' + this.ruleForm.price +
-            '&room_type=' + this.ruleForm.room_type + '&idcard=' + this.ruleForm.idcard + '&phoneNumber=' +
+            '&room_type=' + this.ruleForm.room_type + '&phoneNumber=' +
             this.ruleForm.phoneNumber + '&state=' + this.ruleForm.state + '&h_id=' + this.h_id + '&remark=' + this.ruleForm.remark +
             '&id=' + this.ruleForm.id
           console.log(url)
@@ -225,6 +225,7 @@ export default {
       this.reload()
     },
     handleSearch () {
+      console.log(this.search)
       const url = 'http://10.24.3.53:8181/findO?username=' + this.search + '&h_id=' + this.h_id
       axios.post(url, this.tableData).then((res) => {
         this.tableData = res.data

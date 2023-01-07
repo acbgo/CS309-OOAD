@@ -51,7 +51,6 @@
                   <li class="icon-8" v-show="key1.kind%10"></li>
                 </ul>
                 <div class="room-link">
-                  <a href="#" data-toggle="modal" data-target="#modal-id">Read More</a>
                   <a @click="book(key1.price * key1.discount, key1.room_type)">Book Now</a>
                 </div>
               </div>

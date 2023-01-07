@@ -148,17 +148,21 @@ export default {
   methods: {
     submit () {
       this.$parent.componentName = this.$parent.lastPage
+      console.log(this.userForm.gender.key)
       // console.log(this.userForm)
-      var url = 'http://10.24.3.53:8181/register?username=' + this.userForm.username + '&password=' + this.userForm.password + '&name=' + this.userForm.name + '&gender=' + this.userForm.gender.key + '&phone=' + this.userForm.phone + '&email=' + this.userForm.email + '&address=' + this.userForm.address + '&grant=' + this.userForm.grant.key
+      var url = 'http://10.24.3.53:8181/register?username=' + this.userForm.username + '&password=' + this.userForm.password + '&name=' + this.userForm.name + '&gender=' + this.userForm.gender.key + '&phone=' + this.userForm.phone + '&email=' + this.userForm.email + '&address=' + this.userForm.address
       var xmlhttp = new XMLHttpRequest()
       xmlhttp.open('POST', url, false)
       xmlhttp.send()
       var myData = xmlhttp.responseText
       console.log(myData)
-      if (myData === true) {
-        this.$router.push({name})
+      if (myData === '成功') {
+        this.$message.success('注册成功！')
+        this.$router.push({
+          name: 'Login'
+        })
       } else {
-        alert('注册失败')
+        this.$message.error('注册失败')
       }
     }
   }

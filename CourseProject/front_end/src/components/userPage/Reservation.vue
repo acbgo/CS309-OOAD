@@ -80,7 +80,7 @@
         <el-row v-for="hotel in hotels" :key="hotel.id" style="margin-top: 10px">
           <ItemPage style="background-color: #F0FFFF; display: flex">
             <div class="HotelImg">
-              <img :src="imgLoad(hotel.index)" style="height: 200px">
+              <img :src="imgLoad(hotel.index)" style="width: 200px">
             </div>
             <div class="Detail" style="display: block;width: 370px; margin-left: 30px" @click="setMap(hotel)">
               <div class="name" style="margin-top: 20px; height: 40px">
@@ -167,7 +167,9 @@ export default {
           this.hotels.push(temp)
         }
       }
-    } else {}
+    } else if (this.$route.params.from === 'main') {
+      this.loadData()
+    }
     this.initMap()
     if (sessionStorage.getItem('haveLogin') === 'true') {
       this.HaveLogin = sessionStorage.getItem('haveLogin')
@@ -192,12 +194,25 @@ export default {
             msg: '',
             rate: 0,
             price: 0,
-            lngLat: null
+            lngLat: null,
+            index: 0
           }
           temp.id = hotels[i].id
           temp.name = hotels[i].name
           temp.position = hotels[i].location
           temp.msg = hotels[i].remark
+          temp.rate = hotels[i].score
+          let img = hotels[i].graphPath
+          let index = img.charAt(5)
+          temp.index = index
+          this.imgLoad(index)
+          this.$axios({
+            method: 'POST',
+            url: 'http://10.24.3.53:8181/findLow',
+            params: {h_id: temp.id}
+          }).then(function (resp) {
+            temp.price = resp.data
+          })
           let lngLatTemp = hotels[i].lngLat
           lngLatTemp = `${lngLatTemp}`.split(',')
           let lngLat = [parseFloat(lngLatTemp[0]), parseFloat(lngLatTemp[1])]
@@ -312,6 +327,7 @@ export default {
       xmlHttp.open('POST', url, false)
       xmlHttp.send()
       let data = xmlHttp.responseText
+      this.hotels = []
       // console.log(data)
       if (data !== '[]') {
         // this.$message.info(data.length)
@@ -469,6 +485,7 @@ export default {
           let img = dataTemp.graphPath
           let index = img.charAt(5)
           temp.index = index
+          this.imgLoad(index)
           let lngLatTemp = dataTemp.lngLat.split(',')
           temp.lngLat = [parseFloat(lngLatTemp[0]), parseFloat(lngLatTemp[1])]
           temp.price = dataTemp.price

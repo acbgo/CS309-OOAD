@@ -1,5 +1,14 @@
 <template>
   <div class="PersonSum">
+    <div class="Header" style="background-color: #d9ecff" id="head">
+      <div style="display: flex; justify-content: center">
+        <img :src="hotel" alt @click="Home" style="width: 50px;" @mouseover="hotelOver" @mouseout="hotelOut">
+        <img :src="contact" alt @click="ContactUs" style="width: 50px; margin-left: 20px" @mouseover="contactOver"
+             @mouseout="contactOut">
+        <img :src="loginImg" alt @click="LoginMethods" style="width: 50px; margin-left: 20px" @mouseover="loginImgOver"
+             @mouseout="loginImgOut">
+      </div>
+    </div>
     <div class="PersonTop">
       <div class="PersonTop_img">
         <img class="img" :src="imageUrl"  alt=""/>
@@ -101,7 +110,12 @@ export default {
         points: 99
       },
       userName: '',
-      isRouterAlive: true
+      isRouterAlive: true,
+      hotel: require('../../../assets/svgs/hotel.svg'),
+      contact: require('../../../assets/svgs/contact.svg'),
+      loginUser: '',
+      loginImg: '',
+      HaveLogin: false
     }
   },
   mounted () {
@@ -111,6 +125,11 @@ export default {
     axios.get(url).then(res => {
       this.tableData = res.data[0]
     })
+    if (sessionStorage.getItem('haveLogin') === 'true') {
+      this.HaveLogin = sessionStorage.getItem('haveLogin')
+      this.loginUser = sessionStorage.getItem('loginUser')
+    }
+    this.LoadImg()
   },
   methods: {
     reload1 () {
@@ -128,6 +147,54 @@ export default {
         name: 'MainPage'
       })
       this.$router.go(0)
+    },
+    LoadImg () {
+      if (this.HaveLogin === 'true') {
+        this.loginImg = require('../../../assets/svgs/login1.svg')
+      } else {
+        this.loginImg = require('../../../assets/svgs/login0.svg')
+      }
+    },
+    Home () {
+      this.$router.push({name: 'MainPage'})
+    },
+    ContactUs () {
+      this.$router.push({name: 'ContactUs'})
+    },
+    LoginMethods () {
+      if (this.HaveLogin === 'true') {
+        this.$router.push({
+          name: 'Personal'
+        })
+      } else {
+        this.$router.push({name: 'Login'})
+      }
+    },
+    hotelOver () {
+      this.hotel = require('../../../assets/svgs/hotel-hover.svg')
+    },
+    hotelOut () {
+      this.hotel = require('../../../assets/svgs/hotel.svg')
+    },
+    contactOver () {
+      this.contact = require('../../../assets/svgs/contact-hover.svg')
+    },
+    contactOut () {
+      this.contact = require('../../../assets/svgs/contact.svg')
+    },
+    loginImgOver () {
+      if (this.HaveLogin === 'true') {
+        this.loginImg = require('../../../assets/svgs/login1-hover.svg')
+      } else {
+        this.loginImg = require('../../../assets/svgs/login0-hover.svg')
+      }
+    },
+    loginImgOut () {
+      if (this.HaveLogin) {
+        this.loginImg = require('../../../assets/svgs/login1.svg')
+      } else {
+        this.loginImg = require('../../../assets/svgs/login0.svg')
+      }
     }
   }
 }

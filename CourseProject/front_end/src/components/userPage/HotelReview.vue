@@ -86,6 +86,10 @@ export default {
     this.h_id = this.$route.params.h_id
     this.hotelName = this.$route.params.hotelName
     this.hotelPosition = this.$route.params.position
+    if (sessionStorage.getItem('haveLogin') === 'true') {
+      this.HaveLogin = sessionStorage.getItem('haveLogin')
+      this.loginUser = sessionStorage.getItem('loginUser')
+    }
     this.LoadImg()
     this.loadData()
   },
